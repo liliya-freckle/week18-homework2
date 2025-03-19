@@ -1,0 +1,47 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+}
+
+button {
+    width: 7.5rem;
+    height: 2.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: rgb(233, 143, 70);
+
+}
+
+button:hover {
+    background-color: rgb(156, 156, 156);
+}
+
+#addTaskText,
+#addListText {
+    font-size: larger;
+    font-weight: 700;
+}
+
+#paragraph1,
+#paragraph2 {
+    display: flex;
+    justify-content: space-between
+}
+
+ul {
+    display: none;
+    list-style: none;
+}
+
+
+#buttonClear {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#noTask {
+    color: darkgray;
+
+}
