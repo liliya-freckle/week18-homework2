@@ -29,34 +29,39 @@ function createTask() {
     listTasks.style.display = "block";
     noTask.style.display = "none";
 
+    const newTaskText = document.createElement('li');
+    newTaskText.textContent = valueInput
+    listTasks.append(newTaskText)
+    taskInput.value = ""
 
-    function renderTask() {
-        listTasks.forEach((task) => {
-            const newTask = document.createElement('li');
-            const newTaskText = document.createElement('div')
-            const newTaskCheckbox = document.createElement('input')
 
-            newTaskCheckbox.type = 'checked'
-            newTaskCheckbox.checked = task.checked
-            newTaskText.textContent = valueInput
+    // function renderTask() {
+    //     listTasks.forEach((task) => {
+    //           const newTask = document.createElement('li');
+    // const newTaskText = document.createElement('div')
+    // const newTaskCheckbox = document.createElement('input')
 
-            listTasks.append(newTask)
-            newTask.append(newTaskText)
-            newTask.append(newTaskCheckbox)
-            taskInput.value = ""
-            console.log(newTaskText)
+    // newTaskCheckbox.type = 'checked'
+    // newTaskCheckbox.checked = task.checked
+    // newTaskText.textContent = valueInput
 
-            newTaskCheckbox.addEventListener('change', function () {
-                if (newTaskCheckbox.checked) {
-                    newTaskText.style.textDecoration = 'line-through'
-                } else {
-                    newTaskText.style.textDecoration = 'none'
-                }
-                task.checked = newTaskCheckbox.checked;
-                localStorage.setItem('tasks', JSON.stringify(tasks))
-            })
-        })
-    } renderTask()
+    // listTasks.append(newTask)
+    // newTask.append(newTaskText)
+    // newTask.append(newTaskCheckbox)
+    // taskInput.value = ""
+    // console.log(newTaskText)
+
+    //         newTaskCheckbox.addEventListener('change', function () {
+    //             if (newTaskCheckbox.checked) {
+    //                 newTaskText.style.textDecoration = 'line-through'
+    //             } else {
+    //                 newTaskText.style.textDecoration = 'none'
+    //             }
+    //             task.checked = newTaskCheckbox.checked;
+    //             localStorage.setItem('tasks', JSON.stringify(tasks))
+    //         })
+    //     })
+    // } renderTask()
 }
 
 
